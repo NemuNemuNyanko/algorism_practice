@@ -1,0 +1,21 @@
+git add hoge.txt
+git commit -m "hoge"
+git push origin master
+
+
+レポジトリ作成
+git init
+git add hoge.txt
+git commit -m "hoge"
+git remote add origin [リモートリポジトリ情報]
+git push origin master
+ここに詳しく説明
+https://www.sejuku.net/blog/70775
+
+1つ上の階層(一つ戻る)
+cd ..
+二つ上の階層
+cd ..\..
+
+cppをまとめてadd
+git add *.cpp

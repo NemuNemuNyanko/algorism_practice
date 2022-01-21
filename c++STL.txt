@@ -1,0 +1,10 @@
+swap(a, b)
+変数aと変数bの値を交換する
+
+sort(vec.begin(), vec.end())
+配列変数vecをソートする（要素を小さい順に並び替える）
+
+reverse(vec.begin(), vec.end())
+配列変数vecの要素の並びを逆にする
+
+sort → reverseで大きい順
