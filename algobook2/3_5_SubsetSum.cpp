@@ -15,18 +15,20 @@ const long long INF = 1LL << 60;
 
 
 int main(){
-    int N,v;
-    cin >> N >> v;
+    int N,W;
+    cin >> N >> W;
     vector<int> a(N);
-    rep(i,N){
-        cin >> a.at(i);
+    rep(i,N)cin >> a.at(i);
+    bool exist = false;
+
+    rep(bit,1<<N){
+        int sum = 0;
+        rep(i,N){
+            if(bit & 1<<i)sum += a.at(i);           
+        }
+        if(sum == W)exist = true;
     }
 
-    bool exists = false;
-    rep(i,N){
-        if(a.at(i) == v)exists = true;
-    }
-    
-    if(exists)cout << "Yes"<< endl;
+    if(exist)cout << "Yes" << endl;
     else cout << "No" << endl;
 }

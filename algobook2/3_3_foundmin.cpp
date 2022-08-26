@@ -15,18 +15,15 @@ const long long INF = 1LL << 60;
 
 
 int main(){
-    int N,v;
-    cin >> N >> v;
-    vector<int> a(N);
-    rep(i,N){
-        cin >> a.at(i);
-    }
-
-    bool exists = false;
-    rep(i,N){
-        if(a.at(i) == v)exists = true;
-    }
+    int N;
     
-    if(exists)cout << "Yes"<< endl;
-    else cout << "No" << endl;
+    cin >> N;
+    vector<int> a(N);
+    rep(i,N)cin >> a.at(i);
+
+    long long min_value = INF;
+    rep(i,N){
+        if(a.at(i) < min_value)min_value = a.at(i);
+    } 
+    cout << min_value << endl;
 }

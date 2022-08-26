@@ -22,11 +22,13 @@ int main(){
         cin >> a.at(i);
     }
 
-    bool exists = false;
+    int found_id = -1;
     rep(i,N){
-        if(a.at(i) == v)exists = true;
+        if(a.at(i) == v){
+            found_id = i;
+            break;
+        }
     }
     
-    if(exists)cout << "Yes"<< endl;
-    else cout << "No" << endl;
+    cout << found_id << endl; // -1なら見つからないことをあらわす
 }

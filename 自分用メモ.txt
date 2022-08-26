@@ -23,8 +23,8 @@ clang -Wall ファイル名
 ./a.out < test.txt
 出力は
 ./a.out > result.txt (好きなファイル名)
-windows上では
-.\a.exe　
+windows(cmd)上では
+.\a.exe < test.txt
 
 提出の流れ
 git add ファイル名
