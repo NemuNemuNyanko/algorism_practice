@@ -1,0 +1,40 @@
+git add hoge.txt
+git commit -m "hoge"
+git push origin master
+
+レポジトリ、ローカル環境から削除
+git rm hoge.txt
+git commit -m "hoge"
+git push origin master
+
+ローカル環境には残したい
+git rm --cached hoge.txt
+
+ディレクトリごと削除したい
+git rm 削除したいディレクトリ
+https://www-he.scphys.kyoto-u.ac.jp/member/shotakaha/dokuwiki/doku.php?id=toolbox:git:rm:start
+
+
+レポジトリ作成
+git init
+git add hoge.txt
+git commit -m "hoge"
+git remote add origin [リモートリポジトリ情報]
+(SSH接続のほうが良い)
+git push origin master
+ここに詳しく説明
+https://www.sejuku.net/blog/70775
+
+1つ上の階層(一つ戻る)
+cd ..
+二つ上の階層
+cd ..\..
+
+cppをまとめてadd
+git add *.cpp
+
+sshkeyの登録方法
+https://www.karakaram.com/git-install/
+https://qiita.com/hollyhock0518/items/a3fee20951cd92c87ed9
+https://www.sejuku.net/blog/74220
+

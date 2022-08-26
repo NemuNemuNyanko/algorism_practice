@@ -1,0 +1,47 @@
+c++環境構築
+https://lyncs.hateblo.jp/entry/2018/03/11/032127
+
+\\wsl$でubuntuのファイルが見える
+
+vscodeでpowershell表示　CTRK + @
+
+cd ..  親ディレクトリに移動
+cd ..\.. 二つ上のディレクトリに移動
+cd C:\Users\ryoto\Desktop\study 絶対パスでの移動
+ls 直下のファイルorフォルダを表示
+pwd	現在いる位置を表示する
+右クリック　ペースト
+
+githubのサイトいってforkして自分のアカウントと紐づける
+code で url(with SSH)を入手する
+alg2020のディレクトリにまで進む
+git clone 入手したurl
+
+c実行の上がれ
+clang -Wall ファイル名
+入力をファイルで受け付けて実行は
+./a.out < test.txt
+出力は
+./a.out > result.txt (好きなファイル名)
+windows上では
+.\a.exe　
+
+提出の流れ
+git add ファイル名
+git commit -m "コメント"
+git push
+
+ラスト
+流れに沿ってpull request
+
+普通の実行
+gcc hello.c
+g++ hello.cpp
+.\a.exe
+gccもgcc -Wallできる(g++も可)
+
+CTRL + [ or ]で一気にインテンド処理可能
+
+vscodeでステータスバー(下のあれ)が消えた
+コマンドパレットを起動して(CTRL + SHIFT + P)
+ Toggle Status Bar Visibility を選択

@@ -2,11 +2,25 @@
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 #define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)
+// vector<vector<int>> dp(3, vector<int>(4,0));
+// vector<vector<vector<int>>> dp(3, vector<vector<int>>(4, vector<int>(5,0)) );
+
+template <class T> void chmin(T &a,T b){
+    if(a > b)a = b;
+}
+template <class T> void chmax(T &a,T b){
+    if(a < b)a = b;
+}
+const long long INF = 1LL << 60;
 
 ------------------------------------------------------
+2進数のint
+0b111(2進数の111を表している)
+
+
 intより範囲が大きい型
 int64_t = 0LL; //LLをつけないとダメ
-
+or long long
 
 型変換(数値系の型で有効)
 double x = (double)a;
@@ -56,6 +70,13 @@ vector<vector<vector<int>>> data(3, vector<vector<int>>(4, vector<int>(5,0)) );
 data.size();  // 3 (縦の要素数) (12ではないことに注意!)
 data.at(0).size();  // 4 (横の要素数)
 
+
+グローバル変数として定義したvectorに形をもたせる
+・大きさのみ設定
+dp.resize(N)
+
+・初期値も設定;
+dp.assign(N,INF);
 ---------------------------------------------------
 https://atcoder.jp/contests/apg4b/tasks/APG4b_n
 
