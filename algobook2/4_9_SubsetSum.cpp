@@ -26,7 +26,7 @@ long long pow2(int a, int n){
 
 bool subsum(int n,int w,vector<int> &a){
     if(w == 0)return true;
-    if(n == 0)return false;
+    if(n == 0)return false; //wがマイナスの場合も含めてfalse
     return subsum(n-1, w - a.at(n-1),a) || subsum(n-1, w,a);
 }
 
