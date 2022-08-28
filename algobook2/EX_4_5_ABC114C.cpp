@@ -14,8 +14,8 @@ template <class T> void chmax(T &a,T b){
 const long long INF = 1LL << 60;
 
 // 整数同士の累乗
-int pow2(int a, int n){
-    int r = 1;
+long long pow2(int a, int n){
+    long long r = 1;
     while (n != 0){
         if (n % 2 == 1) r = r * a;
         a = a * a;
@@ -24,16 +24,17 @@ int pow2(int a, int n){
     return r;
 }
 
-long long getnum(long long  number,int left,int right){
-    // 右からleft＋1個のの数字を取得
-    long long subnum = number % pow2(10,left+1);
-    // 右からright個のまでの数字を取得
-    long long subnum2 = number % pow2(10,right);
+int count(long long N,long long now,int flag){
+    if(now > N)return 0;
 
-    return (subnum - subnum2) / pow2(10,right);
+    // 2進数表記で111は0b111
+    if(flag == 0b111)return 1 + count(N,now*10+3,flag) + count(N,now*10+5,flag) + count(N,now*10+7,flag); 
+    return count(N,now*10+3,flag | 0b001) + count(N,now*10+5,flag | 0b010) + count(N,now*10+7,flag | 0b100);
 }
 
 int main(){
-    int num = 0b001 | 0b111;
-    cout << (num == 0b011) << endl;
+    long long N;
+    cin >> N;
+    int answer = count(N,0,0b000);
+    cout << answer << endl;
 }
