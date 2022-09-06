@@ -36,7 +36,8 @@ double rec(int c1,int c2,int c3){
     if(dp.at(c1).at(c2).at(c3)> -0.1)return dp.at(c1).at(c2).at(c3);
 
     double sum = c1+c2+c3;
-    return N/sum + c1/sum * rec(c1-1,c2,c3) + c2/sum * rec(c1+1,c2-1,c3) + c3/sum * rec(c1,c2+1,c3-1);
+    dp.at(c1).at(c2).at(c3) = N/sum + c1/sum * rec(c1-1,c2,c3) + c2/sum * rec(c1+1,c2-1,c3) + c3/sum * rec(c1,c2+1,c3-1);
+    return dp.at(c1).at(c2).at(c3);
 }
 
 
